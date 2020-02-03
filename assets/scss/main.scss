@@ -267,9 +267,13 @@ main {
 
       .item {
         position: relative;
-        background-color: #f0f0f0;
+        background-color: #ededed;
         outline: none;
         height: 670px;
+
+        &:first-child {
+          background-color: #f0f0f0;
+        }
 
         .bgImage {
           position: absolute;
@@ -291,7 +295,7 @@ main {
           top: 50%;
           transform: translateY(-50%);
           width: 100%;
-          padding-left: 85px;
+          padding-left: 15%;
 
           h1,
           h2 {
