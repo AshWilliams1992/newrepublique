@@ -267,12 +267,11 @@ main {
 
       .item {
         position: relative;
-        background-color: #ededed;
         outline: none;
         height: 670px;
 
-        &:first-child {
-          background-color: #f0f0f0;
+        &.bg-dark {
+          background-color: #ededed;
         }
 
         .bgImage {
@@ -411,6 +410,10 @@ main {
       flex-direction: row;
       align-items: center;
 
+      &:first-child {
+        margin: -10px 0px 0px 0px;
+      }
+
       .imageCt,
       .descCt {
         width: 50%;
@@ -455,6 +458,10 @@ main {
 
       @include mobile {
         display: block;
+
+        &:first-child {
+          margin: 0px;
+        }
 
         .imageCt,
         .descCt {
