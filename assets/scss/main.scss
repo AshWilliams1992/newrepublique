@@ -1,0 +1,341 @@
+//- General css
+
+@import "font";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "proxima_regular", Arial, Helvetica, sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cta {
+  font-family: "proxima_bold", Arial, Helvetica, sans-serif;
+  color: #000;
+  border-bottom: 3px solid #000;
+  letter-spacing: 2px;
+  padding-bottom: 6px;
+  position: relative;
+
+  &:hover {
+    &:after {
+      transition: all 0.5s ease-in-out;
+      top: -10px;
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    content: " ";
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    border-bottom: 3px solid #000;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+p,
+span {
+  margin: 0px;
+  font-family: "proxima_light", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #7f7f7f;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "freightbig_bold", Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  line-height: 1.1em;
+}
+
+//- Main section
+
+main {
+  position: relative;
+  $asideW: 160px;
+
+  aside {
+    width: 160px;
+    float: left;
+    position: relative;
+    background-color: #ffffff;
+
+    .fixed {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      padding: 50px 17px 0px 17px;
+    }
+
+    #logo {
+      padding-bottom: 70px;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    nav {
+      padding: 0px 5px;
+      font-family: "proxima_light", Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: bolder;
+      letter-spacing: 2px;
+
+      li {
+        margin-bottom: 30px;
+
+        a {
+          width: 100%;
+          display: block;
+          color: #999999;
+          border-bottom: 1px solid #999999;
+          padding-bottom: 5px;
+          position: relative;
+          transition: color 0.4s ease-in-out;
+
+          &:after {
+            content: " ";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 0%;
+            border-bottom: 1px solid #000000;
+            transition: width 0.4s ease-in-out;
+          }
+
+          &:hover {
+            color: #000000;
+            transition: color 0.4s ease-in-out;
+
+            &:after {
+              width: 100%;
+              transition: width 0.4s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #container {
+    margin-left: 160px;
+
+    .banners {
+      .item {
+        position: relative;
+        min-height: 670px;
+        background-color: #f0f0f0;
+
+        .bgImage {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center right;
+        }
+
+        .txt {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          padding-left: 85px;
+
+          h1,
+          h2 {
+            font-size: 60px;
+            margin: 0px 0px 25px 0px;
+          }
+
+          .icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 390px;
+            padding-top: 40px;
+
+            .icon {
+              img {
+                display: block;
+                margin: 0px auto 15px auto;
+              }
+
+              span {
+                display: block;
+                clear: both;
+
+                font-family: "proxima_bold", Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                line-height: 1.1em;
+                text-align: center;
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .imageCt,
+      .descCt {
+        width: 50%;
+      }
+
+      .imageCt {
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .descCt {
+        padding: 0px 85px;
+
+        h2 {
+          font-size: 60px;
+          margin: 0px 0px 25px 0px;
+        }
+
+        p {
+          font-family: "proxima_regular", Arial, Helvetica, sans-serif;
+          margin-bottom: 40px;
+        }
+      }
+
+      &.bg {
+        background-color: #fafafa;
+      }
+    }
+
+    .contact {
+      background-color: #f3f3f3;
+      padding: 100px 20px;
+      text-align: center;
+
+      h2 {
+        margin: 0px 0px 40px 0px;
+      }
+
+      p {
+        font-family: "proxima_regular", Arial, Helvetica, sans-serif;
+        max-width: 480px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+      }
+
+      input {
+        &.txt {
+          border: 1px solid #dfdfdf;
+          border-radius: 5px;
+          padding: 15px 20px;
+          min-width: 450px;
+          margin-bottom: 40px;
+
+          &::placeholder {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .cta {
+        cursor: pointer;
+        max-width: 280px;
+        margin: 0 auto;
+
+        input {
+          cursor: pointer;
+          font-family: "proxima_bold", Arial, Helvetica, sans-serif;
+          font-size: 15px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    footer {
+      display: table;
+      width: 100%;
+      padding: 40px 20px 25px 20px;
+      vertical-align: middle;
+      background-color: #1a191f;
+
+      .social {
+        max-width: 360px;
+        margin: 0 auto;
+        a {
+          display: inline-block;
+          position: relative;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          border: 1px solid #3f4046;
+          margin: 0 10px;
+
+          i {
+            position: absolute;
+            color: #ffffff;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            transition: color 0.3s ease-in-out;
+          }
+
+          &:hover {
+            i {
+              color: #ff2f92;
+              transition: color 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
