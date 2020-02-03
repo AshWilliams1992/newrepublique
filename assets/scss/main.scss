@@ -411,9 +411,7 @@ main {
       flex-direction: row;
       align-items: center;
 
-      &:first-child {
-        margin: -10px 0px 0px 0px;
-      }
+      margin: -10px 0px 0px 0px;
 
       .imageCt,
       .descCt {
