@@ -1,0 +1,41 @@
+$smallWidth: 360px;
+$tabletWidth: 767px;
+$desktopWidth: 1024px;
+$largeWidth: 1200px;
+
+//-- Funzioni per le media query
+
+//- Telefono SMALL
+@mixin smallMobile() {
+  @media only screen and (max-width: $smallWidth) {
+    @content;
+  }
+}
+
+//- Telefono e Tablet Portrait
+@mixin mobile() {
+  @media only screen and (max-width: $desktopWidth) {
+    @content;
+  }
+}
+
+//- Solo Tablet "Portrait"
+@mixin tablet() {
+  @media only screen and (min-width: $tabletWidth) and (max-width: $desktopWidth) {
+    @content;
+  }
+}
+
+//- Telefono e Tablet Portrait
+@mixin tabletPortrait() {
+  @media only screen and (max-width: $tabletWidth + 33) {
+    @content;
+  }
+}
+
+//- Desktop o superiore
+@mixin desktop() {
+  @media only screen and (min-width: $desktopWidth + 1) and (max-width: $largeWidth) {
+    @content;
+  }
+}

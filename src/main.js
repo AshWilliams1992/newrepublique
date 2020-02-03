@@ -1,16 +1,57 @@
-function init() {
+var $slideCont = $("#container .banners");
+
+$(function () {
+
     console.clear();
 
-    //AOS.init();
+    $slideCont.on('init', () => {
+        $(".slick-arrow").remove();
+        mouseWheel()
+    }).slick({
+        dots: true,
+        vertical: true,
+        cssEase: 'ease-out',
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    vertical: false,
+                }
+            }
+        ]
+    });
 
-    createSlider();
-}
+    openMenu();
 
-function createSlider() {
-    var highSlide = new fullpage('#container .banners', {
-        licenseKey: 'YOUR KEY HERE'
+});
+
+function openMenu() {
+
+    var ow = $(window).innerWidth;
+
+    $("#ham").click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass("active");
+        $("aside").toggleClass("open");
     });
 }
 
-//-- Window load events
-window.onload = init();
+function mouseWheel() {
+    $(window).on('wheel', {
+        $slideCont: $slideCont
+    }, onWheel)
+}
+
+function onWheel(event) {
+
+    var $sliderData = event.data.$slideCont;
+    var delta = event.originalEvent.deltaY;
+
+    if (delta > 0) {
+        $sliderData.slick('slickNext')
+    }
+    else {
+        $sliderData.slick('slickPrev')
+    }
+}

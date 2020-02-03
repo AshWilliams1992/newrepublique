@@ -6,11 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>News Republique</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" />
+    <link href="https://unpkg.com/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" />
     <link href="src/main.min.css" rel="stylesheet" />
   </head>
   <body>
     <main>
+      <header id="mobile">
+        <!-- Logo mobile ? -->
+        <div id="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+
       <aside>
         <div class="fixed">
           <div id="logo">
@@ -54,6 +64,18 @@
                   <span>UX, DESIGN,<br />DEVELOPMENT</span>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="item" style="background-color: #ededed;">
+            <div class="bgImage" style="background-image: url('assets/img/hero-brand.jpg');"></div>
+            <div class="txt">
+              <h1>Brand Strategy</h1>
+              <p>
+                We work with many organisations to research and assess potential digital,<br />
+                mobile and new technology business models that can help them differentiate,<br />
+                create new revenues or reduce the cost of delivery.
+              </p>
+              <a href="#" class="cta">VIEW RELATED WORK</a>
             </div>
           </div>
         </section>
@@ -115,7 +137,8 @@
       </section>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/slick-carousel@1.8.1"></script>
     <script src="src/main.js"></script>
   </body>
 </html>
