@@ -7,4 +7,4 @@
 * Jquery mousewheel;
 * Slick;
 
-## [DEMO](https://ashwilliams1992.github.io/newrepublique/)
+## [DEMO](https://simonlittlefly.github.io/newrepublique/)
